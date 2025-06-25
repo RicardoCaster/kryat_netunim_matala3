@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apartment Price Prediction</title>
+</head>
+<body>
+    <h2>Enter Apartment Details</h2>
+    <form action="/" method="post">
+
+        <label>property_type:</label><input type="text" name="property_type"><br>
+        <label>neighborhood:</label><input type="text" name="neighborhood"><br>
+        <label>address:</label><input type="text" name="address"><br>
+        <label>room_num:</label><input type="number" name="room_num" step="0.1"><br>
+        <label>floor:</label><input type="number" name="floor"><br>
+        <label>area:</label><input type="number" name="area"><br>
+        <label>garden_area:</label><input type="number" name="garden_area"><br>
+        <label>days_to_enter:</label><input type="number" name="days_to_enter"><br>
+        <label>num_of_payments:</label><input type="number" name="num_of_payments"><br>
+        <label>monthly_arnona:</label><input type="number" name="monthly_arnona"><br>
+        <label>building_tax:</label><input type="number" name="building_tax"><br>
+        <label>total_floors:</label><input type="number" name="total_floors"><br>
+        <label>description:</label><input type="text" name="description"><br>
+        <label>has_parking:</label><input type="checkbox" name="has_parking"><br>
+        <label>has_storage:</label><input type="checkbox" name="has_storage"><br>
+        <label>elevator:</label><input type="checkbox" name="elevator"><br>
+        <label>ac:</label><input type="checkbox" name="ac"><br>
+        <label>handicap:</label><input type="checkbox" name="handicap"><br>
+        <label>has_bars:</label><input type="checkbox" name="has_bars"><br>
+        <label>has_safe_room:</label><input type="checkbox" name="has_safe_room"><br>
+        <label>has_balcony:</label><input type="checkbox" name="has_balcony"><br>
+        <label>is_furnished:</label><input type="checkbox" name="is_furnished"><br>
+        <label>is_renovated:</label><input type="checkbox" name="is_renovated"><br>
+        <label>num_of_images:</label><input type="number" name="num_of_images"><br>
+        <label>distance_from_center:</label><input type="number" name="distance_from_center" step="0.1"><br>
+
+        <br>
+        <button type="submit">הערך מחיר</button>
+        {% if prediction is not none %}
+            <h3>Estimated Price: {{ prediction }}</h3>
+        {% endif %}
+    </form>
+</body>
+</html>
